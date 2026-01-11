@@ -41,10 +41,9 @@ class _ShopMenuState extends State<ShopMenu> {
 
   Future<void> _buySkin(int index) async {
     if (ownedSkins[index]) {
-      // Already owned, just equip
-      widget.game.player.setSkin(index);
+      // Already owned
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Skin ${index + 1} equipped!')),
+        SnackBar(content: Text('Skin ${index + 1} already owned!')),
       );
       return;
     }
@@ -63,16 +62,13 @@ class _ShopMenuState extends State<ShopMenu> {
       ).where((s) => s.isNotEmpty).toList();
       await prefs.setStringList('owned_skins', owned);
 
-      // Equip skin
-      widget.game.player.setSkin(index);
-
       setState(() {
         currentBeans = CurrencyManager().balance;
       });
 
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Purchased and equipped Skin ${index + 1}!')),
+          SnackBar(content: Text('Purchased Skin ${index + 1}!')),
         );
       }
     } else {
