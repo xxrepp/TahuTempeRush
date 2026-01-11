@@ -1,0 +1,42 @@
+name: tahutempe_rush
+description: A 2D vertical shooter game with Flame engine
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Game Engine
+  flame: ^1.16.0
+  
+  # Audio
+  flame_audio: ^2.1.0
+  audioplayers: ^5.2.1
+  
+  # Monetization
+  google_mobile_ads: ^5.0.0
+  in_app_purchase: ^3.1.13
+  
+  # Persistence
+  shared_preferences: ^2.2.2
+  
+  # Haptics
+  vibration: ^1.8.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  # Audio assets (to be added)
+  # assets:
+  #   - assets/audio/bgm.mp3
+  #   - assets/audio/tahu.mp3
+  #   - assets/audio/pecah.mp3
