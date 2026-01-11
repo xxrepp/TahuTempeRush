@@ -79,7 +79,6 @@ class _GameScreenState extends State<GameScreen> {
               builder: (context, snapshot) {
                 return GameUI(
                   score: _game.score,
-                  combo: _game.combo,
                   beans: snapshot.data ?? 0,
                 );
               },
@@ -95,8 +94,8 @@ class _GameScreenState extends State<GameScreen> {
   void _handleTap(TapDownDetails details) {
     if (_game.gameOver || !_game.overlays.isActive('GameUI')) return;
     
-    // Single tap = single shot
-    _game.player.shootSingle();
+    // Tap = send 1 attack block
+    _game.sendAttackBlock(count: 1);
   }
 
   void _handlePanStart(DragStartDetails details) {
@@ -109,9 +108,9 @@ class _GameScreenState extends State<GameScreen> {
 
     final delta = details.localPosition - _swipeStart!;
     
-    // Detect upward swipe (dual shot)
+    // Detect upward swipe (send 2 blocks)
     if (delta.dy < -30 && delta.dy.abs() > delta.dx.abs()) {
-      _game.player.shootDual();
+      _game.sendAttackBlock(count: 2);
       _swipeStart = null; // Prevent multiple shots in one swipe
     }
   }

@@ -108,13 +108,18 @@ class MainMenu extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    'TAP: Single Shot',
+                    'TAP: Send 1 Tahu Block',
                     style: TextStyle(color: Colors.white70, fontSize: 16),
                   ),
                   SizedBox(height: 8),
                   Text(
-                    'SWIPE UP: Dual Shot',
+                    'SWIPE UP: Send 2 Tahu Blocks',
                     style: TextStyle(color: Colors.white70, fontSize: 16),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'Destroy Falling Blocks!',
+                    style: TextStyle(color: Colors.yellow, fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),

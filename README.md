@@ -1,23 +1,35 @@
-# TahuTempeRush
+# TahuTempeRush - Solo Endless Block Game
 
-A production-ready 2D vertical shooter game built with Flutter and Flame engine.
+An endless block-clearing game where you tap and swipe to destroy falling blocks!
 
-## Download APK
+## 🎮 How to Play
+
+- **TAP**: Send 1 Tahu block upward
+- **SWIPE UP**: Send 2 Tahu blocks upward
+- **Goal**: Destroy falling blocks before they reach the bottom
+- **Game Over**: When any block reaches the bottom
+- **Endless**: Aim for the highest score!
+
+## 📥 Download APK
 
 Click on the latest successful build in the [Actions tab](../../actions) and download the APK artifact.
 
-## Features
+## ✨ Features
 
-- **Tap** to shoot single bullet
-- **Swipe up** to shoot dual bullets
-- Three enemy types: Tahu, Tempe, Sambal
+- Endless gameplay like Subway Surfer
+- Two block types: Tahu (1 HP, yellow) and Tempe (2 HP, brown)
+- Progressive difficulty - blocks fall faster as you score higher
+- Haptic feedback on mobile devices
+- High score tracking
 - Bean currency system
-- Unlockable player skins
-- Combo system with "MANTAP!" effect
-- Dynamic difficulty scaling
-- Haptic feedback on mobile
-- Rewarded ads for revive system
+- Unlockable skins in shop
 
-## Local Development
+## 🛠️ Local Development
 
 See [RUN_INSTRUCTIONS.md](RUN_INSTRUCTIONS.md) for detailed setup instructions.
+
+## 🎯 Scoring
+
+- Destroy Tahu: +10 points
+- Destroy Tempe: +20 points
+- Difficulty increases every 100 points
